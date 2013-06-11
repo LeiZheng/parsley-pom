@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<actionScriptProperties analytics="false" mainApplicationPath="parsley-flex.as" projectUUID="33eb7a4d-fcfb-42fa-b990-a35eea815dcc" version="11">
+  <compiler additionalCompilerArguments="-locale en_US" autoRSLOrdering="true" copyDependentFiles="true" fteInMXComponents="false" generateAccessible="false" htmlExpressInstall="true" htmlGenerate="true" htmlHistoryManagement="true" htmlPlayerVersionCheck="true" includeNetmonSwc="false" outputFolderPath="bin" removeUnusedRSL="true" sourceFolderPath="src/main/actionscript" strict="true" targetPlayerVersion="0.0.0" useApolloConfig="false" useDebugRSLSwfs="true" useFlashSDK="false" verifyDigests="true" warn="true">
+    <compilerSourcePath>
+      <compilerSourcePathEntry kind="1" linkType="1" path="src/test/actionscript"/>
+    </compilerSourcePath>
+    <libraryPath defaultLinkType="0">
+      <libraryPathEntry kind="4" path="">
+        <excludedEntries>
+          <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/flex.swc" useDefaultLinkType="false"/>
+          <libraryPathEntry kind="3" linkType="1" path="${PROJECT_FRAMEWORKS}/libs/core.swc" useDefaultLinkType="false"/>
+        </excludedEntries>
+      </libraryPathEntry>
+      <libraryPathEntry kind="1" linkType="1" path="libs"/>
+      <libraryPathEntry kind="1" linkType="1" path="${FLEXUNIT_LIB_LOCATION}/version4libs/Common"/>
+      <libraryPathEntry kind="1" linkType="1" path="${FLEXUNIT_LIB_LOCATION}/version4libs/FlexProject"/>
+      <libraryPathEntry kind="1" linkType="1" path="${FLEXUNIT_LIB_LOCATION}/version4libs/FlexProject_Extended"/>
+      <libraryPathEntry kind="1" linkType="1" path="${FLEXUNIT_LOCALE_LOCATION}"/>
+      <libraryPathEntry kind="3" linkType="1" path="/parsley-core/bin/parsley-core.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/parsley-xml/bin/parsley-xml.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/spicelib-commands/bin/spicelib-commands.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/spicelib-logging/bin/spicelib-logging.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/spicelib-reflect/bin/spicelib-reflect.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/spicelib-util/bin/spicelib-util.swc" useDefaultLinkType="false"/>
+      <libraryPathEntry kind="3" linkType="1" path="/spicelib-xml-mapper/bin/spicelib-xml-mapper.swc" useDefaultLinkType="false"/>
+    </libraryPath>
+    <sourceAttachmentPath/>
+  </compiler>
+  <applications>
+    <application path="parsley-flex.as"/>
+  </applications>
+  <modules/>
+  <workers/>
+  <buildCSSFiles/>
+  <flashCatalyst validateFlashCatalystCompatibility="false"/>
+</actionScriptProperties>

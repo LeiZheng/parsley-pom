@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Object 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:model="org.spicefactory.parsley.coretag.inject.model.*" xmlns:core="org.spicefactory.parsley.flex.tag.core.*" xmlns:tag="org.spicefactory.parsley.inject.tag.*" xmlns:object="org.spicefactory.parsley.object.*">
+	
+	<mx:Script>
+		<![CDATA[
+			import org.spicefactory.parsley.testmodel.ArrayElement;
+			import flash.utils.Dictionary;
+		]]>
+	</mx:Script>
+	
+	
+	<model:InjectedDependency id="dependency"/>
+	
+	<core:MxmlRootObjectTag id="object" type="{Dictionary}">
+		<tag:DynamicPropertyTag name="stringProp" value="foo"/>
+		<tag:DynamicPropertyTag name="intProp" value="7"/>
+		<tag:DynamicPropertyTag name="booleanProp" value="true"/>
+		<tag:DynamicPropertyTag name="refProp" idRef="dependency"/>
+		<tag:DynamicPropertyTag name="arrayProp">
+			<object:ArrayTag>
+				<mx:String>AA</mx:String>
+				<mx:String>BB</mx:String>
+				<object:ObjectReferenceTag idRef="dependency"/>
+				<object:ObjectReferenceTag typeRef="{InjectedDependency}"/>
+				<object:NestedObjectTag type="{ArrayElement}"/>
+			</object:ArrayTag>
+		</tag:DynamicPropertyTag>
+	</core:MxmlRootObjectTag> 
+	
+</mx:Object> 

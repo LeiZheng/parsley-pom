@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!--
+
+    Copyright 2008 Marvin Herman Froeder
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.spicefactory.parsley</groupId>
+  <artifactId>parsley-core</artifactId>
+  <version>3.0.1-SNAPSHOT</version>
+  <packaging>swc</packaging>
+  <description>Parsley Core</description>
+  <name>Parsley Core</name>
+  <parent>
+	<groupId>org.spicefactory.parsley</groupId>
+    <artifactId>parseley-parent</artifactId>
+     <version>3.0.1-SNAPSHOT</version>
+  </parent>
+
+  <build>
+    <sourceDirectory>src/main/actionscript/kernal-api</sourceDirectory>
+    <testSourceDirectory>src/test/actionscript</testSourceDirectory>
+ 	<plugins>
+	   <plugin>
+		<groupId>org.codehaus.mojo</groupId>
+		<artifactId>build-helper-maven-plugin</artifactId>
+		<executions>
+			<execution>
+				<phase>generate-sources</phase>
+				<goals><goal>add-source</goal></goals>
+				<configuration>
+					<sources>
+						<source>src/main/actionscript/toolbox</source>
+					</sources>
+				</configuration>
+			</execution>
+		</executions>
+	   </plugin>
+	   <plugin>
+        <groupId>org.sonatype.flexmojos</groupId>
+        <artifactId>flexmojos-maven-plugin</artifactId>
+        <version>${flex.mojos.version}</version>
+        <extensions>true</extensions>
+		<configuration>
+			<keepAs3Metadatas append="true">
+				<name>Inject</name>
+				<name>InjectConstructor</name>
+				<name>Factory</name>
+				<name>AssignableTo</name>
+				<name>Init</name>
+				<name>Destroy</name>
+				<name>Observe</name>
+				<name>AsyncInit</name>
+				<name>MessageDispatcher</name>
+				<name>ManagedEvents</name>
+				<name>MessageHandler</name>
+				<name>MessageBinding</name>
+				<name>MessageError</name>
+				<name>MessageInterceptor</name>
+				<name>CommandResult</name>
+				<name>CommandComplete</name>
+				<name>CommandError</name>
+				<name>CommandStatus</name>
+				<name>Publish</name>
+				<name>Subscribe</name>
+				<name>PublishSubscribe</name>
+				<name>ResourceBinding</name>
+				<name>Autoremove</name>
+				<name>Selector</name>
+				<name>Target</name>
+				<name>Internal</name>
+				<name>ObjectDefinition</name>
+				<name>DynamicObject</name>
+			</keepAs3Metadatas>
+			<includeSources>
+			  <includeSource>src/main/actionscript/kernel-api</includeSource>
+			  <includeSource>src/main/actionscript/toolbox</includeSource>
+			</includeSources>
+			<includeNamespaces>
+			  <namespace>http://www.spicefactory.org/parsley</namespace>
+			</includeNamespaces>
+			<includeClasses>
+				<include>ConfigurationClasses</include>
+			</includeClasses>
+			<includeFiles>
+				<include>${project.basedir}/src/main/resource/design.xml</include>
+			</includeFiles>
+			<namespaces>
+	      	   <namespace>
+	        	<uri>http://www.spicefactory.org/parsley</uri>
+	        	<manifest>src/main/resource/core-manifest.xml</manifest>
+	      	   </namespace>
+	        </namespaces>
+		</configuration>
+		<dependencies>
+			<dependency>
+			  <groupId>com.adobe.flex</groupId>
+			  <artifactId>compiler</artifactId>
+			  <version>${flex.sdk.version}</version>
+			  <type>pom</type>
+			</dependency>
+		</dependencies>
+      </plugin>
+    </plugins>
+  </build>
+ 
+  <dependencies>
+    <dependency>
+      <groupId>org.spicefactory.parsley</groupId>
+      <artifactId>spicelib-commands</artifactId>
+      <version>${project.version}</version>
+      <type>swc</type>
+    </dependency>
+  </dependencies>
+
+</project>

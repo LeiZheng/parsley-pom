@@ -1,0 +1,21 @@
+<mx:Object 
+	xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:core="org.spicefactory.parsley.flex.tag.core.*" xmlns:tag="org.spicefactory.parsley.lifecycle.tag.*">
+	
+	<mx:Script>
+		<![CDATA[
+			import org.spicefactory.parsley.lifecycle.methods.model.DestroyModel;
+			import org.spicefactory.parsley.lifecycle.methods.model.InitModel;
+		]]>
+	</mx:Script>
+	
+	
+	<core:MxmlRootObjectTag id="initModel" type="{InitModel}" lazy="true">
+		<tag:InitMethodDecorator method="init"/>
+	</core:MxmlRootObjectTag> 
+	
+	<core:MxmlRootObjectTag id="destroyModel" type="{DestroyModel}" lazy="true">
+		<tag:DestroyMethodDecorator method="dispose"/>
+	</core:MxmlRootObjectTag> 
+	
+	
+</mx:Object> 

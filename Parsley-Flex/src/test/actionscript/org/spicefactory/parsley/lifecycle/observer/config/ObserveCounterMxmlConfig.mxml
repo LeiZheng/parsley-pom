@@ -1,0 +1,28 @@
+<mx:Object 
+	xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:core="org.spicefactory.parsley.flex.tag.core.*" xmlns:tag="org.spicefactory.parsley.lifecycle.tag.*">
+	
+	<mx:Script>
+		<![CDATA[
+
+			import org.spicefactory.parsley.core.processor.DestroyPhase;
+			import org.spicefactory.parsley.lifecycle.observer.model.LifecycleEventCounter;
+		]]>
+	</mx:Script>
+	
+	
+	<core:MxmlRootObjectTag type="{LifecycleEventCounter}">
+		<tag:ObserveMethodDecorator method="globalListener"/>
+		<tag:ObserveMethodDecorator method="globalVListener"/>
+		<tag:ObserveMethodDecorator method="globalHListener"/>
+		<tag:ObserveMethodDecorator method="localListener" scope="local"/>
+		<tag:ObserveMethodDecorator method="localVListener" scope="local"/>
+		<tag:ObserveMethodDecorator method="localHListener" scope="local"/>
+		<tag:ObserveMethodDecorator method="customListener" scope="custom"/>
+		<tag:ObserveMethodDecorator method="customVListener" scope="custom"/>
+		<tag:ObserveMethodDecorator method="customHListener" scope="custom"/>
+		<tag:ObserveMethodDecorator method="globalIdListener" objectId="text"/>
+		<tag:ObserveMethodDecorator method="globalDestroyListener" phase="{DestroyPhase.preDestroy()}"/>
+	</core:MxmlRootObjectTag>
+	
+	
+</mx:Object> 

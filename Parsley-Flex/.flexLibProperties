@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="FlexSupportClasses"/>
+    <classEntry path="org.spicefactory.parsley.flex.FlexConfig"/>
+    <classEntry path="org.spicefactory.parsley.flex.FlexContextBuilder"/>
+    <classEntry path="org.spicefactory.parsley.flex.FlexSupport"/>
+    <classEntry path="org.spicefactory.parsley.flex.binding.FlexPropertyWatcher"/>
+    <classEntry path="org.spicefactory.parsley.flex.command.AsyncTokenResultProcessor"/>
+    <classEntry path="org.spicefactory.parsley.flex.modules.FlexApplicationDomainProvider"/>
+    <classEntry path="org.spicefactory.parsley.flex.processor.FlexConfigurationProcessor"/>
+    <classEntry path="org.spicefactory.parsley.flex.resources.FlexResourceBindingAdapter"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.ConfigurationTagBase"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.ContextAwareTagBase"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.ContextBuilderSyncEvent"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.ContextBuilderTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.CustomConfigTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.FlexConfigTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.FlexContextEvent"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.InstanceTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.LocalScopeTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.MessageSettingsTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.PropertiesFileTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.PropertiesObjectTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.PropertiesStringTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.RuntimeConfigTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.ScopeTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.ViewLifecycleTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.ViewProcessorTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.builder.ViewSettingsTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.command.AbstractMxmlCommandParentTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.command.MxmlCommandFactoryTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.command.MxmlCommandFlowTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.command.MxmlCommandSequenceTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.command.MxmlCommandTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.command.MxmlParallelCommandsTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.core.MxmlDynamicObjectTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.core.MxmlObjectsTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.core.MxmlRootObjectTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.core.MxmlViewTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.view.ConfigureTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.view.FastInjectTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.tag.view.InjectTag"/>
+    <classEntry path="org.spicefactory.parsley.flex.util.MessageConfirmation"/>
+    <classEntry path="org.spicefactory.parsley.flex.util.MessageConfirmationTag"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Object 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:model="org.spicefactory.parsley.coretag.inject.model.*" xmlns:core="org.spicefactory.parsley.flex.tag.core.*" xmlns:tag="org.spicefactory.parsley.inject.tag.*" xmlns:object="org.spicefactory.parsley.object.*">
+	
+	<mx:Script>
+		<![CDATA[
+			import org.spicefactory.parsley.testmodel.ArrayElement;
+			import org.spicefactory.parsley.testmodel.CoreModel;
+		]]>
+	</mx:Script>
+	
+	
+	<model:InjectedDependency id="dependency"/>
+	
+	
+	<core:MxmlRootObjectTag id="object" type="{CoreModel}">
+		<tag:ConstructorTag>
+			<mx:String>foo</mx:String>
+			<mx:Number>7</mx:Number>
+		</tag:ConstructorTag>
+		<tag:PropertyTag name="booleanProp" value="true"/>
+		<tag:PropertyTag name="refProp" idRef="dependency"/>
+		<tag:PropertyTag name="arrayProp">
+			<object:ArrayTag>
+				<mx:String>AA</mx:String>
+				<mx:String>BB</mx:String>
+				<object:ObjectReferenceTag idRef="dependency"/>
+				<object:ObjectReferenceTag typeRef="{InjectedDependency}"/>
+				<object:NestedObjectTag type="{ArrayElement}"/>
+			</object:ArrayTag>
+		</tag:PropertyTag>
+	</core:MxmlRootObjectTag> 
+	
+	
+</mx:Object> 

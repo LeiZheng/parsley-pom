@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<componentPackage>
+    <component id="NestedObject" class="org.spicefactory.parsley.object.NestedObjectTag"/>
+    <component id="Array" class="org.spicefactory.parsley.object.ArrayTag"/>
+    <component id="ObjectRef" class="org.spicefactory.parsley.object.ObjectReferenceTag"/>
+    
+    <component id="ConstructorArgs" class="org.spicefactory.parsley.inject.tag.ConstructorTag"/>
+    <component id="Property" class="org.spicefactory.parsley.inject.tag.PropertyTag"/>
+    <component id="DynamicProperty" class="org.spicefactory.parsley.inject.tag.DynamicPropertyTag"/>
+    
+    
+    <component id="AsyncInit" class="org.spicefactory.parsley.lifecycle.tag.AsyncInitDecorator"/>
+    <component id="Factory" class="org.spicefactory.parsley.lifecycle.tag.FactoryMethodDecorator"/>
+    <component id="Init" class="org.spicefactory.parsley.lifecycle.tag.InitMethodDecorator"/>
+    <component id="Destroy" class="org.spicefactory.parsley.lifecycle.tag.DestroyMethodDecorator"/>
+    <component id="Observe" class="org.spicefactory.parsley.lifecycle.tag.ObserveMethodDecorator"/>
+    
+    <component id="ManagedEvents" class="org.spicefactory.parsley.messaging.tag.ManagedEventsDecorator"/>
+    <component id="MessageDispatcher" class="org.spicefactory.parsley.messaging.tag.MessageDispatcherDecorator"/>
+    <component id="MessageHandler" class="org.spicefactory.parsley.messaging.tag.MessageHandlerDecorator"/>
+    <component id="MessageBinding" class="org.spicefactory.parsley.messaging.tag.MessageBindingDecorator"/>
+    <component id="MessageError" class="org.spicefactory.parsley.messaging.tag.MessageErrorDecorator"/>
+
+	<component id="MapCommand" class="org.spicefactory.parsley.command.tag.MapCommandTag"/>
+	<component id="CommandRef" class="org.spicefactory.parsley.command.tag.CommandRefTag"/>
+	
+	<component id="LinkResultType" class="org.spicefactory.parsley.command.tag.link.LinkResultTypeTag"/>
+	<component id="LinkResultValue" class="org.spicefactory.parsley.command.tag.link.LinkResultValueTag"/>
+	<component id="LinkResultProperty" class="org.spicefactory.parsley.command.tag.link.LinkResultPropertyTag"/>
+	<component id="LinkAllResults" class="org.spicefactory.parsley.command.tag.link.LinkAllResultsTag"/>
+    
+    <component id="CommandComplete" class="org.spicefactory.parsley.comobserver.tag.CommandCompleteDecorator"/>
+    <component id="CommandResult" class="org.spicefactory.parsley.comobserver.tag.CommandResultDecorator"/>
+    <component id="CommandError" class="org.spicefactory.parsley.comobserver.tag.CommandErrorDecorator"/>
+    <component id="CommandStatus" class="org.spicefactory.parsley.comobserver.tag.CommandStatusDecorator"/>
+
+    <component id="Publish" class="org.spicefactory.parsley.binding.tag.PublishDecorator"/>
+    <component id="Subscribe" class="org.spicefactory.parsley.binding.tag.SubscribeDecorator"/>
+    <component id="PublishSubscribe" class="org.spicefactory.parsley.binding.tag.PublishSubscribeDecorator"/>
+
+    <component id="ResourceBinding" class="org.spicefactory.parsley.resources.tag.ResourceBindingDecorator"/>
+
+    <component id="InjectMetadataSupport" class="org.spicefactory.parsley.inject.metadata.InjectMetadataSupport"/>
+    <component id="BindingMetadataSupport" class="org.spicefactory.parsley.binding.metadata.BindingMetadataSupport"/>
+    <component id="MessagingMetadataSupport" class="org.spicefactory.parsley.messaging.metadata.MessagingMetadataSupport"/>
+    <component id="CommandObserverMetadataSupport" class="org.spicefactory.parsley.comobserver.metadata.CommandObserverMetadataSupport"/>
+    <component id="LifecycleMetadataSupport" class="org.spicefactory.parsley.lifecycle.metadata.LifecycleMetadataSupport"/>
+    <component id="ResourceMetadataSupport" class="org.spicefactory.parsley.resources.metadata.ResourceMetadataSupport"/>
+</componentPackage>
+
+
+            

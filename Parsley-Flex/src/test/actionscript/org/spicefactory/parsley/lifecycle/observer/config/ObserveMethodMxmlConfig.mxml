@@ -1,0 +1,27 @@
+<mx:Object 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:dec="org.spicefactory.parsley.tag.lifecycle.*" xmlns:core="org.spicefactory.parsley.flex.tag.core.*">
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.containers.Box;		
+			import mx.containers.HBox;		
+			import mx.containers.VBox;		
+			import mx.controls.Text;		
+		]]>
+	</mx:Script>
+	
+	
+	<core:MxmlRootObjectTag type="{Box}" lazy="true"/>
+
+	<core:MxmlRootObjectTag type="{HBox}" lazy="true"/>
+
+	<core:MxmlRootObjectTag type="{VBox}" lazy="true"/>
+
+	<core:MxmlRootObjectTag type="{Text}" lazy="true" id="text"/>
+
+	<core:MxmlRootObjectTag type="{Text}" lazy="true" id="text2"/>
+	
+	
+	
+</mx:Object> 

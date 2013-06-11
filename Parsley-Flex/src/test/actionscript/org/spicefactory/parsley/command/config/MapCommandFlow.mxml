@@ -1,0 +1,29 @@
+<mx:Object 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:flexcom="org.spicefactory.parsley.flex.tag.command.*"
+	xmlns:lc="org.spicefactory.parsley.tag.lifecycle.*" xmlns:tag="org.spicefactory.parsley.command.tag.*" xmlns:link="org.spicefactory.parsley.command.tag.link.*" xmlns:tag1="org.spicefactory.parsley.inject.tag.*">
+	
+	<mx:Script>
+		<![CDATA[
+
+			import org.spicefactory.parsley.command.target.AsyncCommandWithTrigger;
+			import org.spicefactory.parsley.command.trigger.TriggerA;
+
+		]]>
+	</mx:Script>
+	
+	
+	<tag:MapCommandTag messageType="{TriggerA}">
+		<flexcom:MxmlCommandFlowTag>
+			<flexcom:MxmlCommandTag type="{AsyncCommandWithTrigger}">
+				<tag1:PropertyTag name="result" value="1"/>
+				<link:LinkResultValueTag value="1" to="{second}"/>
+			</flexcom:MxmlCommandTag>
+			<flexcom:MxmlCommandTag type="{AsyncCommandWithTrigger}" id="second">
+				<tag1:PropertyTag name="result" value="2"/>
+			</flexcom:MxmlCommandTag>
+		</flexcom:MxmlCommandFlowTag>
+	</tag:MapCommandTag>
+
+
+</mx:Object>

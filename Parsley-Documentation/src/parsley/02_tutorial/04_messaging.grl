@@ -1,0 +1,48 @@
+#sc2 tutorial_messaging Sending and Receiving Messages #sc2
+
+#par While Dependency Injection already allows some level of decoupling if you declare injection
+points with interface types, for some parts of the application you'll prefer even looser coupling,
+letting the parts of your application communicate through messages, without the sender and receiving
+objects having to know each other. #par
+
+#par For example you might transform low-level view events into calls to a presentation model which 
+dispatches application messages, so that any action/controller
+can register for all message types it is interested in. #par
+
+#par For more details on this topic see #ref messaging_intro #ref and #ref mvc_intro #ref. #par
+
+#par With Parsley you can configure the sending as well as the receiving side with metadata tags.
+The sending part may simply contain a #cdi [MessageDispatcher] #cdi tag on a public function
+property: #par
+
+#cdb
+#hlt [MessageDispatcher] #hlt
+public var dispatcher: Function;
+
+public class LoginServiceImpl implements LoginService {
+
+    [...]
+    
+    private function handleLoginResult (user:User) : void {
+        #hlt dispatcher(new LoginMessage(user)); #hlt
+    }
+    
+}
+#cdb 
+
+#par Here we use the injected dispatcher function to send an instance of #cdi LoginMessage #cdi.
+With Parsley messages do not need to extend the Event class (although they could if they'd need to). #par
+
+#par For the receiving side you can use the #cdi [MessageHandler] #cdi tag to signal interest in a particular
+message type, determined by the parameter type of the method: #par
+
+#cdb
+[MessageHandler]
+public function login (event:LoginEvent) : void {
+#cdb
+
+#par Like with Dependency Injection selecting the message receivers by type improves the robustness of the system
+as you don't have to take care of unique event type String constants for the whole system. #par
+
+#par There are more tags for the receiving side like the #cdi [MessageBinding] #cdi tag.
+Those will be explained in #ref messaging_intro #ref. #par 

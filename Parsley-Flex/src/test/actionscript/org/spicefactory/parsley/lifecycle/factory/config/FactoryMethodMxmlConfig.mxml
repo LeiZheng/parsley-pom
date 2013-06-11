@@ -1,0 +1,21 @@
+<mx:Object 
+	xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:core="org.spicefactory.parsley.flex.tag.core.*" xmlns:tag="org.spicefactory.parsley.lifecycle.tag.*">
+	
+	<mx:Script>
+		<![CDATA[
+			import org.spicefactory.parsley.lifecycle.factory.model.TestFactory;
+			import org.spicefactory.parsley.coretag.inject.model.InjectedDependency;
+			
+			public function get injectedDependency () : InjectedDependency {
+				return new InjectedDependency();
+			}
+		]]>
+	</mx:Script>
+	
+	
+	<core:MxmlRootObjectTag id="factoryWithDependency" type="{TestFactory}" lazy="true">
+		<tag:FactoryMethodDecorator method="createInstance"/>
+	</core:MxmlRootObjectTag> 
+	
+	
+</mx:Object> 

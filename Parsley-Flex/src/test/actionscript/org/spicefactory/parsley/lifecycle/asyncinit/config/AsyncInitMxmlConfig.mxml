@@ -1,0 +1,16 @@
+<mx:Object 
+	xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:core="org.spicefactory.parsley.flex.tag.core.*" xmlns:tag="org.spicefactory.parsley.lifecycle.tag.*">
+	
+	<mx:Script>
+		<![CDATA[
+			import org.spicefactory.parsley.lifecycle.asyncinit.model.AsyncInitModel;
+		]]>
+	</mx:Script>
+	
+	
+	<core:MxmlRootObjectTag id="asyncInitModel" type="{AsyncInitModel}">
+		<tag:AsyncInitDecorator/>
+	</core:MxmlRootObjectTag> 
+	
+	
+</mx:Object> 

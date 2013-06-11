@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Object xmlns:mx="http://www.adobe.com/2006/mxml" xmlns:core="org.spicefactory.parsley.flex.tag.core.*" xmlns:tag="org.spicefactory.parsley.binding.tag.*">
+	<mx:Script>
+		<![CDATA[
+			import org.spicefactory.parsley.binding.model.StringHolder;
+			import org.spicefactory.parsley.binding.model.AnimalHolder;
+			import org.spicefactory.parsley.binding.model.CatHolder;
+		]]>
+	</mx:Script>
+
+	<core:MxmlDynamicObjectTag id="publish" type="{CatHolder}">
+		<tag:PublishDecorator property="value"/>
+	</core:MxmlDynamicObjectTag> 
+	
+	<core:MxmlDynamicObjectTag id="publishId" type="{CatHolder}">
+		<tag:PublishDecorator property="value" objectId="cat"/>
+	</core:MxmlDynamicObjectTag>
+	
+	<core:MxmlDynamicObjectTag id="publishLocal" type="{CatHolder}">
+		<tag:PublishDecorator property="value" scope="local"/>
+	</core:MxmlDynamicObjectTag> 
+	
+	<core:MxmlDynamicObjectTag id="publishManaged" type="{CatHolder}">
+		<tag:PublishDecorator property="value" managed="true" scope="local"/>
+	</core:MxmlDynamicObjectTag> 
+	
+	<core:MxmlDynamicObjectTag id="publishPersistent" type="{StringHolder}">
+		<tag:PublishSubscribeDecorator persistent="true" property="value" scope="local" objectId="test"/>
+	</core:MxmlDynamicObjectTag> 
+	
+	<core:MxmlDynamicObjectTag id="subscribe" type="{CatHolder}">
+		<tag:SubscribeDecorator property="value"/>
+	</core:MxmlDynamicObjectTag> 
+	
+	<core:MxmlDynamicObjectTag id="subscribeId" type="{CatHolder}">
+		<tag:SubscribeDecorator property="value" objectId="cat"/>
+	</core:MxmlDynamicObjectTag> 
+	
+	<core:MxmlDynamicObjectTag id="subscribeLocal" type="{CatHolder}">
+		<tag:SubscribeDecorator property="value" scope="local"/>
+	</core:MxmlDynamicObjectTag> 
+	
+	<core:MxmlDynamicObjectTag id="animalSubscribe" type="{AnimalHolder}">
+		<tag:SubscribeDecorator property="value"/>
+	</core:MxmlDynamicObjectTag> 
+	
+	<core:MxmlDynamicObjectTag id="pubsub" type="{CatHolder}">
+		<tag:PublishSubscribeDecorator property="value"/>
+	</core:MxmlDynamicObjectTag>
+	
+</mx:Object>
