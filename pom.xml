@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!--
+
+    Copyright 2008 Marvin Herman Froeder
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.spicefactory.parsley</groupId>
+  <artifactId>parseley-parent</artifactId>
+  <version>3.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <description>Parent maven project for Parseley libs</description>
+  <name>Parent Pom</name>
+  <properties>
+	<flex.mojos.version>4.0-RC2</flex.mojos.version>
+	<flex.sdk.version>4.6.0.23201</flex.sdk.version>
+  </properties>
+  <modules>
+	<module>Spicelib-Util</module>
+	<module>Spicelib-Reflect</module>
+	<module>Spicelib-XML-Mapper</module>
+	<module>Spicelib-Logging</module>
+	<module>Spicelib-Commands</module>
+	<module>Parsley-Core</module>
+	<module>Parsley-XML</module>
+	<module>Parsley-Flex</module>
+  </modules>
+  
+  <build>
+    <sourceDirectory>src/main/flex</sourceDirectory>
+    <testSourceDirectory>src/test/flex</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.sonatype.flexmojos</groupId>
+        <artifactId>flexmojos-maven-plugin</artifactId>
+        <version>${flex.mojos.version}</version>
+        <extensions>true</extensions>
+
+		<configuration>
+			
+			<compilerWarnings>
+			  <show-actionscript-warnings>true</show-actionscript-warnings>
+			  <warn-no-constructor>false</warn-no-constructor>
+			</compilerWarnings>
+		</configuration>
+
+		<dependencies>
+			<dependency>
+			  <groupId>com.adobe.flex</groupId>
+			  <artifactId>compiler</artifactId>
+			  <version>${flex.sdk.version}</version>
+			  <type>pom</type>
+			</dependency>
+
+		<dependency>
+		  <groupId>com.adobe.flexunit</groupId>
+		  <artifactId>flexunit</artifactId>
+		  <version>4.1-RC2</version>
+		  <type>swc</type>		  
+		</dependency>	
+				</dependencies>
+      </plugin>
+    </plugins>
+  </build>
+     <repositories>
+	 
+        <repository>
+            <id>repository.sonatype.org.flexgroup</id>
+            <url>https://repository.sonatype.org/content/groups/flexgroup/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>opensource.adobe.com</id>
+            <url>http://opensource.adobe.com/svn/opensource/cairngorm3/maven-repository</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+
+        <repository>
+            <id>cortizone.googlecode.com</id>
+	        <url>http://cortizone.googlecode.com/hg/maven-repositories</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>m2.cubeia.com</id>
+            <url>http://m2.cubeia.com/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>repository.sonatype.org.flexgroup</id>
+            <url>https://repository.sonatype.org/content/groups/flexgroup/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>m2.cubeia.com</id>
+            <url>http://m2.cubeia.com/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>cortizone.googlecode.com</id>
+            <url>http://cortizone.googlecode.com/hg/maven-repositories</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+	</pluginRepositories>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.adobe.flex.framework</groupId>
+      <artifactId>framework</artifactId>
+      <version>${flex.sdk.version}</version>
+      <type>pom</type>
+	 </dependency>
+    <dependency>
+      <groupId>com.adobe.flex.framework</groupId>
+      <artifactId>common-framework</artifactId>
+      <version>${flex.sdk.version}</version>
+      <type>pom</type>
+	 </dependency>
+	 
+    <dependency>
+      <groupId>com.adobe.flexunit</groupId>
+      <artifactId>flexunit</artifactId>
+      <version>4.1-RC2</version>
+      <type>swc</type>
+      <scope>test</scope>
+	  <exclusions>
+		<exclusion>
+			<groupId>com.adobe.flex.framework</groupId>
+			<artifactId>airframework</artifactId>
+		</exclusion>
+	  </exclusions>
+    </dependency>
+	<dependency>
+      <groupId>org.hamcrest</groupId>
+      <artifactId>hamcrest-as3</artifactId>
+      <version>1.1</version>
+      <type>swc</type>
+	  <scope>test</scope>
+	 </dependency>
+	 <dependency>
+      <groupId>com.adobe.flexunit</groupId>
+      <artifactId>flexunitUIRunner</artifactId>
+      <version>4.1-RC2</version>
+      <type>swc</type>
+	  <scope>test</scope>
+    </dependency>	
+  </dependencies>
+
+
+</project>
