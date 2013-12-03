@@ -27,7 +27,7 @@
   <properties>
 	<flex.mojos.version>6.0.1</flex.mojos.version>
 	<flex.sdk.version>4.10.0.20130801</flex.sdk.version>
-	<flex.playerglobal.version></flex.playerglobal.version>
+	<flex.playerglobal.version>11.8</flex.playerglobal.version>
 	
   </properties>
   <modules>
@@ -172,7 +172,7 @@
 	  <dependency>
 		<groupId>com.adobe.flash.framework</groupId>
 		<artifactId>playerglobal</artifactId>
-		<version>11.8</version>
+		<version>${flex.playerglobal.version}</version>
 		<type>swc</type>
 	  </dependency>
   
