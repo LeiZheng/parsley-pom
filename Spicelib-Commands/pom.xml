@@ -35,7 +35,7 @@
     <testSourceDirectory>src/test/actionscript</testSourceDirectory>
 	<plugins>
       <plugin>
-        <groupId>org.sonatype.flexmojos</groupId>
+        <groupId>net.flexmojos.oss</groupId>
         <artifactId>flexmojos-maven-plugin</artifactId>
         <version>${flex.mojos.version}</version>
         <extensions>true</extensions>

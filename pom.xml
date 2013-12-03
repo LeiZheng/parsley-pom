@@ -25,8 +25,10 @@
   <description>Parent maven project for Parseley libs</description>
   <name>Parent Pom</name>
   <properties>
-	<flex.mojos.version>4.0-RC2</flex.mojos.version>
-	<flex.sdk.version>4.6.0.23201</flex.sdk.version>
+	<flex.mojos.version>6.0.1</flex.mojos.version>
+	<flex.sdk.version>4.10.0.20130801</flex.sdk.version>
+	<flex.playerglobal.version></flex.playerglobal.version>
+	
   </properties>
   <modules>
 	<module>Spicelib-Util</module>
@@ -44,7 +46,7 @@
     <testSourceDirectory>src/test/flex</testSourceDirectory>
     <plugins>
       <plugin>
-        <groupId>org.sonatype.flexmojos</groupId>
+        <groupId>net.flexmojos.oss</groupId>
         <artifactId>flexmojos-maven-plugin</artifactId>
         <version>${flex.mojos.version}</version>
         <extensions>true</extensions>
@@ -167,6 +169,13 @@
 	</pluginRepositories>
 
   <dependencies>
+	  <dependency>
+		<groupId>com.adobe.flash.framework</groupId>
+		<artifactId>playerglobal</artifactId>
+		<version>11.8</version>
+		<type>swc</type>
+	  </dependency>
+  
     <dependency>
       <groupId>com.adobe.flex.framework</groupId>
       <artifactId>framework</artifactId>
