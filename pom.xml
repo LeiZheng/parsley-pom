@@ -122,6 +122,18 @@
     </repositories>
 
     <pluginRepositories>
+	        <pluginRepository>
+            <id>repository.opensource.adobe.com.cairggorm3.plugin.repo</id>
+            <url>http://opensource.adobe.com/svn/opensource/cairngorm3/maven-repository</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+
+
         <pluginRepository>
             <id>repository.sonatype.org.flexgroup</id>
             <url>https://repository.sonatype.org/content/groups/flexgroup/</url>
