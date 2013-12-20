@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Module xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		  xmlns:s="library://ns.adobe.com/flex/spark" 
+		  xmlns:parsley="http://www.spicefactory.org/parsley"
+		  xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="300">
+	
+	<fx:Declarations>
+		<parsley:Configure>
+			
+		</parsley:Configure>
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			
+			import domain.User;
+			[Inject]
+			public var mainPm:MainPM;
+			
+			[Inject]
+			public var user:User;
+			
+			protected function button1_clickHandler(event:MouseEvent):void
+			{
+				Alert.show("user: " + user.name);
+			}
+			
+		]]>
+	</fx:Script>
+	<s:VGroup>
+		<s:Button label="click on me PM" click="mainPm.onClick(event)" />
+		<s:Button label="direct user access" click="button1_clickHandler(event)"/>
+	</s:VGroup>
+	
+</s:Module>

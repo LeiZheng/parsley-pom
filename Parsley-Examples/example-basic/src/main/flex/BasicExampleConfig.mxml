@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Objects 
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns="http://www.spicefactory.org/parsley" xmlns:mx="library://ns.adobe.com/flex/mx" xmlns:presentation="presentation.*" xmlns:application="application.controller.*" xmlns:impl="infra.delegate.impl.*" xmlns:delegate="infra.delegate.*" xmlns:domain="domain.*" >
+	<fx:Script>
+		<![CDATA[
+			
+		]]>
+	</fx:Script>
+	<fx:Declarations>
+		<!--
+		Parsley defined objects slated for injection where [Inject] metatag appears.
+		-->
+		<!-- infra -->
+		
+		<!-- Domain -->
+		<domain:User name="Lei Zheng" id="testID"/>		
+		
+		<!-- Application -->
+		<presentation:MainPM />
+	</fx:Declarations>
+	
+</Objects>
