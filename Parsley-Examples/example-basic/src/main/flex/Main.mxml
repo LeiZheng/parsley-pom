@@ -1,9 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <s:Application xmlns:fx="http://ns.adobe.com/mxml/2009" 
-			   xmlns:s="library://ns.adobe.com/flex/spark" 
-			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600">
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:parsley="http://www.spicefactory.org/parsley"
+			   xmlns:mx="library://ns.adobe.com/flex/mx" minWidth="955" minHeight="600" creationComplete="application1_creationCompleteHandler(event)" xmlns:presentation="presentation.*">
+	<fx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import mx.core.FlexGlobals;
+			import mx.events.FlexEvent;
+			import mx.utils.ObjectProxy;
+			
+			private function startApp(event:Event):void {
+				this.addElement(rootView);
+			}	
+			
+			protected function application1_creationCompleteHandler(event:FlexEvent):void
+			{
+				trace("start...");
+				
+			}
+			
+		]]>
+	</fx:Script>
 	<fx:Declarations>
+		<parsley:ContextBuilder >	
+			<parsley:FlexConfig type="{BasicExampleConfig}"/>
+			<parsley:RuntimeConfig>
+				<parsley:Instance instance="{new ObjectProxy(FlexGlobals.topLevelApplication.parameters)}" id="flashVars" />
+			</parsley:RuntimeConfig>
+		</parsley:ContextBuilder>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
 	</fx:Declarations>
-	<mx:Label text="Hello world"/>
+	<presentation:RootView id="rootView" />
 </s:Application>
