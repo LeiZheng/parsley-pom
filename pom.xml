@@ -19,16 +19,20 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.spicefactory.parsley</groupId>
-  <artifactId>parseley-parent</artifactId>
+  <artifactId>parsley-parent</artifactId>
   <version>3.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <description>Parent maven project for Parseley libs</description>
   <name>Parent Pom</name>
   <properties>
 	<flex.mojos.version>6.0.1</flex.mojos.version>
+	<!--
 	<flex.sdk.version>4.10.0.20130801</flex.sdk.version>
 	<flex.playerglobal.version>11.8</flex.playerglobal.version>
-	
+	-->
+		<flex.sdk.version>4.11.0.20131017</flex.sdk.version>
+	<flex.playerglobal.version>11.9</flex.playerglobal.version>
+
   </properties>
   <modules>
 	<module>Spicelib-Util</module>
