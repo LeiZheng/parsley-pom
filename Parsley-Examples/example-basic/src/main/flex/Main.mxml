@@ -23,13 +23,14 @@
 		]]>
 	</fx:Script>
 	<fx:Declarations>
-		<parsley:ContextBuilder >	
+		<parsley:ContextBuilder complete="startApp(event)">	
 			<parsley:FlexConfig type="{BasicExampleConfig}"/>
 			<parsley:RuntimeConfig>
 				<parsley:Instance instance="{new ObjectProxy(FlexGlobals.topLevelApplication.parameters)}" id="flashVars" />
 			</parsley:RuntimeConfig>
 		</parsley:ContextBuilder>
 		<!-- Place non-visual elements (e.g., services, value objects) here -->
+		<presentation:LoginPage id="rootView" />
 	</fx:Declarations>
-	<presentation:RootView id="rootView" />
+	
 </s:Application>

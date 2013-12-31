@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group xmlns:fx="http://ns.adobe.com/mxml/2009" 
+		 xmlns:s="library://ns.adobe.com/flex/spark" 
+		 xmlns:parsley="http://www.spicefactory.org/parsley"
+		 xmlns:mx="library://ns.adobe.com/flex/mx" width="400" height="600">
+	<fx:Declarations>
+		<parsley:Configure/>
+	</fx:Declarations>
+	<fx:Script>
+		<![CDATA[
+			[Inject]
+			public var pm:LoginPagePM;
+		]]>
+	</fx:Script>
+	<s:Form>
+		<s:FormHeading label="Login">
+			
+		</s:FormHeading>
+		<s:FormItem label="User Name:" id="userNameLB"/>
+		<s:FormItem label="Passowrd:" id="passwordLB"/>
+		<s:Button label="Sign in" click="pm.onClickSignIn('name','password')"/>
+	</s:Form>
+</s:Group>

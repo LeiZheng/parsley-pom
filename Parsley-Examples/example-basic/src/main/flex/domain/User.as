@@ -4,6 +4,7 @@ package domain
 	{ 
 		public var name:String;
 		public var id:String;
+		public var password:String;
 		public function User()
 		{
 		}

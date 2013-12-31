@@ -16,8 +16,8 @@
 		<!-- Domain -->
 		<domain:User name="Lei Zheng" id="testID"/>		
 		
-		<!-- Application -->
-		<presentation:MainPM />
+		<!-- Presentation -->
+		<presentation:LoginPagePM />
 	</fx:Declarations>
 	
 </Objects>
