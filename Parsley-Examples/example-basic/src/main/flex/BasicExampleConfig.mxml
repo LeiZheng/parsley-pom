@@ -14,10 +14,11 @@
 		<!-- infra -->
 		
 		<!-- Domain -->
-		<domain:User name="Lei Zheng" id="testID"/>		
+		<domain:UserManager/>
 		
 		<!-- Presentation -->
 		<presentation:LoginPagePM />
+		<presentation:MyUploadsPagePM/>
 	</fx:Declarations>
 	
 </Objects>

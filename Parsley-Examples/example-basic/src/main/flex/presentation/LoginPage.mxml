@@ -16,8 +16,12 @@
 		<s:FormHeading label="Login">
 			
 		</s:FormHeading>
-		<s:FormItem label="User Name:" id="userNameLB"/>
-		<s:FormItem label="Passowrd:" id="passwordLB"/>
-		<s:Button label="Sign in" click="pm.onClickSignIn('name','password')"/>
+		<s:FormItem label="User Name:" id="userNameLB">
+			<s:TextInput id="userNameTI" />
+		</s:FormItem>
+		<s:FormItem label="Passowrd:" id="passwordLB">
+			<s:TextInput id="passwordTI"/>
+		</s:FormItem>
+		<s:Button label="Sign in" click="pm.onClickSignIn(userNameTI.text, passwordTI.text)"/>
 	</s:Form>
 </s:Group>
